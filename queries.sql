@@ -13,4 +13,12 @@ WHERE employer.location = "St. Louis City";
 
 ## Part 3: Test it with SQL
 
+DROP table job;
+
 ## Part 4: Test it with SQL
+
+SELECT job.name, skill.description
+FROM skill, job
+INNER JOIN job_skills ON job.id = job_skills.jobs_id
+WHERE skill.id = job_skills.skills_id
+ORDER BY job.name ASC;

@@ -31,11 +31,9 @@ public class ListController {
     static HashMap<String, String> columnChoices = new HashMap<>();
 
     public ListController () {
-
         columnChoices.put("all", "All");
         columnChoices.put("employer", "Employer");
         columnChoices.put("skill", "Skill");
-
     }
 
     @RequestMapping("")
@@ -43,7 +41,6 @@ public class ListController {
         model.addAttribute("jobs", jobRepository.findAll());
         model.addAttribute("employers", employerRepository.findAll());
         model.addAttribute("skills", skillsRepository.findAll());
-
         return "list";
     }
 
